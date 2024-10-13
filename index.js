@@ -118,7 +118,9 @@ app.get('/download', async (req, res) => {
         res.status(500).json({ error: 'Failed to download video', details: error.message });
     }
 });
-
+app.get('/',async (req,res)=>{
+  console.log("server is running");
+})
 app.listen(port || 4000, () => {
     console.log(`Server running on port ${port}`);
 });
