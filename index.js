@@ -119,7 +119,7 @@ app.get('/download', async (req, res) => {
     }
 });
 app.get('/',async (req,res)=>{
-  console.log("server is running");
+  res.send("server is running");
 })
 app.listen(port || 4000, () => {
     console.log(`Server running on port ${port}`);
