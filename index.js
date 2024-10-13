@@ -81,7 +81,7 @@ app.get('/auth/google/callback', passport.authenticate('google', {
 app.get('/detail', async (req, res) => {
     console.log("check1complete");
  
-   videoUrl = req.query.url;
+   videoUrl = decodeURIComponent(req.query.url);
     console.log(videoUrl);
     if (!ytdl.validateURL(videoUrl)) {
         return res.status(400).json({ error: 'Invalid YouTube URL' });
@@ -92,7 +92,7 @@ app.get('/detail', async (req, res) => {
         const videoInfo = await ytdl.getInfo(videoUrl);
         const videodetails = videoInfo.videoDetails;
         const videoTitle = videoInfo.videoDetails.title;
-        console.log(videodetails);
+        console.log("videodetails",videodetails);
         res.json({videodetails});
         
     } catch (error) {
