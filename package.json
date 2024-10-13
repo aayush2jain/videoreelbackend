@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":" nodemon index.js"
+    "dev": " nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "m3u8stream": "^0.8.6",
     "nodemon": "^3.1.7",
     "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0",
     "pully": "^2.7.0",
     "ytdl-core": "^4.11.5",
     "ytdl-mp3": "^5.0.0"
