@@ -92,7 +92,8 @@ app.get('/detail', async (req, res) => {
         const videoInfo = await ytdl.getInfo(videoUrl);
         const videodetails = videoInfo.videoDetails;
         const videoTitle = videoInfo.videoDetails.title;
-        res.json({videodetails,videoTitle});
+        console.log(videodetails);
+        res.json({videodetails});
         
     } catch (error) {
         res.status(500).json({ error: 'Failed to download video' });
