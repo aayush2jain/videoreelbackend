@@ -13,7 +13,10 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000, // 24 hours
   keys: ['11hhahsjba']
 }));
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true // Allow credentials (cookies, headers, etc.)
+}));
 // Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
